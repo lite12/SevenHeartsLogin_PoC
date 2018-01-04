@@ -2,7 +2,7 @@
 	require_once('./includes/db.php');
 
 	$auth = $_POST;
-	$auth['pass'] = md5($auth['pass'].md5($auth['account'])); // salted hash
+	$auth['pass'] = md5($auth['pass'].md5($auth['account']));
 
 	$retries = 5; // Resets every 15 mins.
 
@@ -42,7 +42,7 @@
 				$s->execute();
 				for ($set = [], $r = $s->get_result(); $row = $r->fetch_assoc(); $set[] = $row);
 
-				// Cool-down: 00h:15m:00s. Prevents brute-forcing attacks against web service. 
+				// Cool-down: 00h:15m:00s. Prevents brute force attacks against the web service. 
 				if (count($set) > $retries) {
 					$q = "UPDATE useraccount SET daterelease = date_add(now(), interval 15 minute) WHERE account = ? LIMIT 1";	
 					if ($s = $conn->prepare($q)) { $s->bind_param('s', $auth['account']); $s->execute(); }
