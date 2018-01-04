@@ -2,7 +2,7 @@
 	require_once('./includes/db.php');
 
 	$auth = $_POST;
-	$auth['pass'] = md5($auth['pass'].md5($auth['account']));
+	$auth['pass'] = md5($auth['pass'].md5($auth['account'])); // salted hash
 
 	$retries = 5; // Resets every 15 mins.
 
