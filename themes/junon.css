@@ -1,0 +1,138 @@
+BODY {
+text-align:center;
+margin:12px 0;
+background:#EFD28E url(./junon/bgs/bg1.jpg) repeat-x fixed;
+}
+
+body, label, select, option {cursor: url(./generic/Cursors/Default.cur#linkcursor), url(./generic/Cursors/Default.cur), auto;}
+input[type="radio"], input[type="button"], input[type="image"], input[type="IMAGE"], input[type="submit"], input[type="text"], input[type="password"] {cursor: url(./generic/Cursors/Link.cur), url(./generic/Cursors/Link.cur), auto;}
+
+area {
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+
+TABLE { 
+margin:0 auto;
+background:#EFE2A6;
+width:728px;
+height:440px;
+font:11px verdana,geneva; 
+font-weight:normal;
+color:salmon;
+border:0;
+padding:0;
+}
+
+TD {
+padding:0;
+background:#FCE7BF;
+}
+
+A {
+font:11px verdana,geneva; 
+font-weight:normal; 
+color:#994640;
+text-decoration:underline;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+A:hover {
+font:11px verdana,geneva;  
+color:#E5E5E5;
+border:1px solid #994640;
+background:#CB5C12;
+text-decoration:none;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+
+H1 {
+font:17px verdana,geneva; 
+font-weight:bold; 
+color:#CB5C12;
+margin-top:15px;
+}
+
+INPUT {
+background:url(./junon/images/input_1.gif);
+width:112px;
+height:17px;
+border:0;
+padding-top:2px;
+padding-left:5px;
+font:9px verdana,geneva;
+font-weight:bold;
+color:#A9793A;
+margin:3px;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+.inputMidi {border:0;background:none;margin-top:13px;margin-left:62px;font-weight:normal;
+}
+.checkbox 
+{ border	: 0px solid green;
+ width	: 11px;
+ cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto; }
+.cleardefault {cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;}
+
+P {
+line-height:12px;
+padding:0;
+margin-top:0;
+}
+
+UL {
+margin:3px 0 8px 0;
+padding-left:35px;
+width:82%;
+font-size:10px;
+line-height:14px;
+color:#666666;
+}
+UL A {font-size:10px;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;}
+UL A:hover {font-size:10px;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;}
+
+/*HEADER*/
+
+.headerZero {width:14px;  height:96px; padding:0;}
+.headerLeft {width:99px; height:96px; padding:0;}
+.headerMidi {width:615px; height:96px; padding:0;}
+
+/*CONTENT*/
+.contentHeadZero {width:14px;height:55px;padding:0;}
+.contentHeadLeft {width:714px;height:55px;padding:0;background:url(./junon/images/register_conthead1.jpg);}
+.contentZero {
+width:14px;
+height:245px;
+padding:0px;
+}
+.contentLeft {
+background:url(./junon/images/register_cont1.jpg);
+width:714px;
+height:245px;
+padding:0px;
+line-height:28px;
+font:10px verdana;
+font-weight: bold;
+color: #D47106;
+}
+#left {text-align:right;margin-top:0px;margin-right:3px;}
+
+.contentMidi {
+background:url(./junon/images/register_cont2.jpg);
+width:478px;
+height:245px;
+padding:0px;
+font:10px verdana;
+font-weight: normal;
+color: #D47106;
+}
+#midi {text-align:left;margin-top:9px;margin-left:2px}
+.register_foot {
+background:url(./junon/images/register_foot.jpg);
+width:728px;
+height:45px;
+padding:0px;
+font:11px verdana;
+font-weight: bold;
+color: #D94714;
+}

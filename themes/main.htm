@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<? require_once('./includes/themes.php'); $_SESSION['th'] = 'eldeon'; ?>
+<html>
+<head>
+<title>Seven Hearts Online</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="SevenHearts is a free online MMORPG based on the interplanetary fantasy universe and gameplay mechanics of International ROSE Online.  Download the game and explore the world of Seven Hearts today!">
+<meta name="keywords" content="Online Gaming, Games, Gaming, Online RPG, MMORPG, Free Online Game, Free Online RPG, Free MMORPG, Rose Online, Seven Hearts Online, Seven Hearts, 7H, Seven Episodes, Ruff-Rose, Ruff-Rose Alternative, ROSE, Rose Private Server, Rose Server, Free Rose Server, SHO, 7Hearts, 7Hearts Online, 7 Hearts, 7-Hearts, International Rose, iROSE, Evolution, ROSE Evo, Rose Evolution, Rose Online Game, Top Online Game, Top MMORPG, Top Free MMORPG, Best Game, Best Free Game, Best Online Game, Best Free Online Game, Best MMORPG">
+<meta http-equiv="imagetoolbar" content="no"> 
+<meta http-equiv="imagetoolbar" content="false"> 
+<link rel="shortcut icon" href="./themes/<?=$_SESSION['th']?>/images/favicon.gif" type="image/x-icon">
+<script type="text/javascript" src="./themes/generic/scripts/swfobject.js"></script>
+<script type="text/javascript" src="./themes/generic/scripts/prototype.js"></script>
+<script type="text/javascript" src="./themes/generic/scripts/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="./themes/generic/scripts/lightbox.js"></script>
+<script src="./themes/generic/scripts/mini.scripts.js" type="text/javascript"></script>
+<!--[if lt IE 7.]><script defer type="text/javascript" src="pngfix.js"></script><![endif]-->
+<link rel = "stylesheet" type = "text/css" href = "./themes/<?=$_SESSION['th']?>.css" />
+</head>
+
+<!--HEADER-->  
+<form name="form" method="POST" action="./<?=$_SERVER['PHP_SELF']?>?action=<?= ((isset($_SESSION['7h']))?'logout':'login')?>" style="padding:0;margin:1;border:0;">
+<body>
+<table cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="left">
+<center>
+<div style="position:absolute;z-index:0;top:12px;text-align:left;border:0;padding:0;left:50%;">
+<center>
+<div style="position:absolute;z-index:-1;left:50%;border:0;padding:0;">
+<center>
+<img style="position:relative;z-index:-1;left:11px;left:-50%;top:-1px;" src="./themes/<?=$_SESSION['th']?>/headers/header3.jpg"></center>
+</div>
+</center>
+</div></center><img src="./themes/<?=$_SESSION['th']?>/images/header.L.jpg"><img style="vertical-align:top;position:absolute;" src="./themes/<?=$_SESSION['th']?>/images/header.T.jpg"><img src="./themes/<?=$_SESSION['th']?>/images/header.B.jpg"><img src="./themes/<?=$_SESSION['th']?>/images/header.R.jpg">
+<div style="position:absolute;z-index:50;left:50%;top:2px;"><object style="position:absolute;z-index:50;top:9px;left:-191px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" id="7hearts" width="382" height="332"><param name="allowScriptAccess" value="sameDomain"/>
+<param name="movie" value="7heartsv4.swf?images=2&style=3"/><param name="quality" value="best"/><param name="bgcolor" value="#ffffff"/><embed src="./7heartsv4.swf?randbits=" flashvars="images=2&style=3" wmode="transparent" quality="best" bgcolor="#FFFFFF&quot;" bgcolor="#ffffff" width="382" height="332" swliveconnect="true" id="7hearts" name="7hearts" align="left" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/><param name="wmode" value="transparent">
+</object></div></td>
+  </tr>
+</table>
+
+ <!--MIDDLE-->  
+ <table cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" class="left"><div id="population"><span style="color:#D99E2D">Up</span> Arua 5717<br><span style="color:#D99E2D">Up</span> Loki 343<br><span style="color:#D99E2D">Up</span> Gaia 216<br><span style="color:#D99E2D">Up</span> Character</div></td> 
+    <td align="center" class="midi">	<div align="center" valign="top" class="inputMidi">
+	
+	<input class="cleardefault" name="account" type="text" value="<? if(isset($_SESSION['7h'])){echo ' Hello, '.$_SESSION['7h']['account'].'!';}else{ echo 'Account Login'; } ?>" 
+	<? if (isset($_SESSION['7h'])) { echo 'disabled'; } ?> ><br>
+	<? if (!isset($_SESSION['7h'])) { ?><input class="cleardefault" name="pass" type="password" value="Password"><? } ?><br>
+	<? if (!isset($_SESSION['7h'])) { ?><input type="IMAGE" title="Login your 7hz account here!" alt="Login your 7hz account here!" src="./themes/<?=$_SESSION['th']?>/images/input_1login.gif" style="margin:1px;padding:0px;border:0px;width:56px;height:17px;"><? } else { ?>
+	<input type="IMAGE" title="Logout your 7hz account here!" alt="Logout your 7hz account here!" src="./themes/<?=$_SESSION['th']?>/images/input_1logout.gif" style="margin:1px;padding:0px;border:0px;width:56px;height:17px;"><? } ?>
+<a href="#javascript:popUpWN('#', 544,95);" title="Click here to change or reset password."><img src="./themes/<?=$_SESSION['th']?>/images/input_2pass.gif" width="52" height="17" style="margin:1px;border:0"></a><br>
+    <a href="#javascript:popUpW('#',800,500)" title="View and arrange your 7hz storage. Login required."><img src="./themes/<?=$_SESSION['th']?>/images/input_3storageview.gif" width="56" height="18" style="margin:1px;border:0"></a><a href="#javascript:popUpLG('#')" title="Check what are our GMs up to. Login required."><img src="./themes/<?=$_SESSION['th']?>/images/input_4gmview.gif" width="52" height="18" style="margin:1px;border:0"></a></div>
+	
+	</td>
+    <td align="center" class="riteA"><div id="jobA"><span style="color:#D99E2D">677</span> Knight<br><span style="color:#D99E2D">1272</span> Bourg<br><span style="color:#D99E2D"><span style="color:#D99E2D">894</span></span> Scout<br><span style="color:#D99E2D">1580</span> Cleric</div></td>
+    <td align="center" class="riteB"><div id="jobB"><span style="color:#D99E2D">415</span> Mage<br><span style="color:#D99E2D">567</span> Artisan<br><span style="color:#D99E2D">957</span> Raider<br><span style="color:#D99E2D">344</span> Champ</div></td>
+  </tr>
+</table>
+
+<!--CONTENT-->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="news"><img src="./themes/<?=$_SESSION['th']?>/images/news_top.jpg" width="404" height="12"></td>
+  </tr>
+  <tr> 
+    <td valign="top" style="width:404px;padding:5px 18px;text-align:left;background:url(./themes/<?=$_SESSION['th']?>/images/news_middle.jpg)">
+
+<h1>SevenHearts PvP Server: Gaia</h1>
+<h2>November 10, 2007</h2>
+<p>SevenHearts PvP Server: Gaia<br/>
+<p>Server up! Updates v776-v777 have been applied, with a second update for the Halloween quest coming later this week. See the full <a href="#">updates list</a> and the <a href="#">preview thread</a> for more info!</p>
+
+<h1>It's Halloween at SevenHearts!</h1>
+<h2>October 9, 2007</h2>
+<br/>
+Some of you probably saw this coming if you`ve been following the forum drama & discussion lately, Gaia is the PK server that was promised <a href="#">here</a>. Although this is not the November announcement or our next update, it`s more like something players can enjoy before then and between larger patches. I want to stress that this is running on a trial basis to see if it is as good for the community as we would hope it is, the PK server will be behind on significant updates and specifically the November update won`t be applied to PvP server right away, if at all. More on that later.<br/>
+<br/>
+We encourage everyone to try out the new server and give us feed back. Stockpile still works. P2P isn't possible right now as this is a trial basis, if feedback is positive we`ll add some means of P2P on the PvP server as well.<br/>
+<br/>
+I know some players will be worried about Seven Hearts jumping on the HR bandwagon and I want to clear that misconception immediately. We`ll be doubling our efforts on the main server to make sure this is the right place for both high rates and iROSE nostalgics.<br/>
+<br/>
+7&#9829;`s</p>
+
+<h1>Halloween Begins!</h1>
+<h2>October 23, 2007</h2>
+<p><p><p><p class="infos">
+
+<p><strong>&nbsp;See the sights!</strong><br>
+<a href="./themes/generic/Updates/v774/grade6.jpg" rel="lightbox[7h]" class="effectable" border="0" title="Seven Hearts Online - Screenshot 4"><img src="./themes/generic/Updates/v774/grade6.jpg" alt="Seven Hearts Online - Screenshot 4" title="Seven Hearts Online - Screenshot 4" width="80" height="60" style="border:1px solid #FFA100"/></a>&nbsp;
+<a href="./themes/generic/Updates/v774/screen092.png" rel="lightbox[7h]" class="effectable" border="0" title="Seven Hearts Online - Screenshot 5"><img src="./themes/generic/Updates/v774/screen092.png" alt="Seven Hearts Online - Screenshot 5" title="Seven Hearts Online - Screenshot 5" width="80" height="60" style="border:1px solid #FFA100"/></a>&nbsp;
+<a href="./themes/generic/Updates/v774/screen091.jpg" rel="lightbox[7h]" class="effectable" border="0" title="Seven Hearts Online - Screenshot 6"><img src="./themes/generic/Updates/v774/screen091.jpg" alt="Seven Hearts Online - Screenshot 6" title="Seven Hearts Online - Screenshot 6" width="80" height="60" style="border:1px solid #FFA100"/></a>&nbsp;</p>
+
+<p><strong>&nbsp;Hear the sounds!</strong>
+<ul><li><a href="./" onclick="return !showMenu(34, event);">Zant & Junon Polis.</li></a><div style="visibility: hidden;position: absolute;" id="menu34" class="blist" onclick="event.cancelBubble"><center><ul><li><font style="vertical-align:super;">Zant and Junon Polis</font>&nbsp;&nbsp;</li></ul><embed id="player34" src="./themes/generic/Updates/v774/mp3player.swf" width="300" height="20" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=./themes/generic/Updates/v774/Junon_015_sec.mp3&height=20&width=300&showvolume=false"/></center></div></li>
+<li><a href="./" onclick="return !showMenu(35, event);">The Magical City of Eucar.</li></a><div style="visibility: hidden;position: absolute;" id="menu35" class="blist" onclick="event.cancelBubble"><center><ul><li><font style="vertical-align:super;">The Magical City of Eucar</font>&nbsp;&nbsp;</li></ul><embed id="player35" src="./themes/generic/Updates/v774/mp3player.swf" width="300" height="20" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=./themes/generic/Updates/v774/Eucar_030_sec.mp3&height=20&width=300&showvolume=false"/></center></div></li>
+<li><a href="./" onclick="return !showMenu(36, event);">Crusader Training Grounds.</li></a><div style="visibility: hidden;position: absolute;" id="menu36" class="blist" onclick="event.cancelBubble"><center><ul><li><font style="vertical-align:super;">Crusader Training Grounds</font>&nbsp;&nbsp;</li></ul><embed id="player36" src="./themes/generic/Updates/v774/mp3player.swf" width="300" height="20" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=./themes/generic/Updates/v774/TrainingGround_030_sec.mp3&height=20&width=300&showvolume=false"/></center></div></li>
+<li><a href="./" onclick="return !showMenu(37, event);">Clan Resort.</li></a><div style="visibility: hidden;position: absolute;" id="menu37" class="blist" onclick="event.cancelBubble"><center><ul><li><font style="vertical-align:super;">Clan Resort</font>&nbsp;&nbsp;</li></ul><embed id="player37" src="./themes/generic/Updates/v774/mp3player.swf" width="300" height="20" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=./themes/generic/Updates/v774/Clan_Resort_030_sec.mp3&height=20&width=300&showvolume=false"/></center></div></li>
+<li><a href="./" onclick="return !showMenu(38, event);">Dolphin Island.</li></a><div style="visibility: hidden;position: absolute;" id="menu38" class="blist" onclick="event.cancelBubble"><center><ul><li><font style="vertical-align:super;">Dolphin Island</font>&nbsp;&nbsp;</li></ul><embed id="player38" src="./themes/generic/Updates/v774/mp3player.swf" width="300" height="20" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=./themes/generic/Updates/v774/Dolphin_Island_30_sec.mp3&height=20&width=300&showvolume=false"/></center></div></li>
+</ul></p>
+
+<p><strong>&nbsp;Become the best!</strong><br>
+</p><a style="text-decoration:none;" href="#">See the full patch preview here!</a></p></p>
+
+<h1>Seven Hearts v767-768 Patch</h1>
+<h2>July 30, 2007</h2>
+<p><p><p class="infos">
+<strong>&nbsp;Seven Hearts v767-768 Patch Notes:</strong>
+<ul><li><a href="./" onclick="return !showMenu(21, event);">NPC Equipment.</a></a><div style="visibility: hidden;position: absolute;" id="menu21" class="blist" onclick="event.cancelBubble"><ul><li>Shops in Eucar now carry a range of weapons appropriate for levels 80-9x.</li></ul></div></li>
+<li><a href="./" onclick="return !showMenu(32, event);">New NPC/MOB Equipment.</li></a><div style="visibility: hidden;position: absolute;" id="menu32" class="blist" onclick="event.cancelBubble"><ul><li>An assortment of new backitems, masks and weapons have been added as drops to various NPCs on all 3 planets, with the requirements appropriate for the level of the NPC they drop from. Black and red astarot wings have also been added to Astarot Kings, they drop at rate slightly lower then the blue astarot wings. More information <a href="#">here</a>.</li></ul><center><p><img src="./themes/icons/mobweapons.jpg" title="NPC/MOB Weapons" alt="NPC/MOB Weapons" border="0"><p><img src="./themes/icons/mobitems.jpg" title="NPC/MOB Equipment" alt="NPC/MOB Equipment" border="0"><br></center></div></li>
+<li><a href="./" onclick="return !showMenu(22, event);">New Ability Parts.</li></a><div style="visibility: hidden;position: absolute;" id="menu22" class="blist" onclick="event.cancelBubble"><ul><li>Moldie Sunroof & Moldie Sunroof Pink (both PAT Ability parts) are sold by Sergei in the city of Eucar.</li></ul><center><img src="./themes/icons/moldyroof.jpg" title="Mouldy SunRoof" alt="Il Cigar Classico" border="0"></center></div></li>
+<li><a href="./" onclick="return !showMenu(23, event);">Job Specific Equipment.</li></a><div style="visibility: hidden;position: absolute;" id="menu23" class="blist" onclick="event.cancelBubble"><ul><li>Class specific equipment for Lev 170, 185, 200 and 210 are included in this update with stats that have been refitted to follow the iROSE style hierarchy. See the <a href="#">patch preview</a> for more images.</li></ul><center><img src="./themes/icons/armor.jpg" title="High Level Equipment" alt="High Level Equipment" border="0"></center></div></li>
+<li><a href="./" onclick="return !showMenu(24, event);">New Crafts and Drops.</li></a><div style="visibility: hidden;position: absolute;" id="menu24" class="blist" onclick="event.cancelBubble"><ul><li>The bulk of this update comes from the meticulously planned crafts and drop tables for Eldeon. Level 170 and 185 Equipment can be crafted by Artisans with the appropriate skills at max level. Armours for level 200 and 210 are drop-only, more information in the following points.</li></ul></div></li>
+<li><a href="./" onclick="return !showMenu(25, event);">High Level Weapons.</li></a><div style="visibility: hidden;position: absolute;" id="menu25" class="blist" onclick="event.cancelBubble"><ul><li>Evo weapons have been implemented and refitted for level 170 and 185. Our plan is to provide alternatives and higher level weapons with 7h exclusive content, coming in the near future.</li></ul></div></li>
+<li><a href="./" onclick="return !showMenu(26, event);">Exclusive Materials.</li></a><div style="visibility: hidden;position: absolute;" id="menu26" class="blist" onclick="event.cancelBubble"><ul><li>All materials have been extended with higher quality parts to match the lower success rates and considerably more challenging crafting requirements of 170-185 equipment. Both common and rare monster-specific materials drop from each monster type on Eldeon to ensure well balanced crafting requirements.</li></ul><center><p><img src="./themes/icons/mats.jpg" title="Seven Hearts Exclusive Materials!" alt="Seven Hearts Exclusive Materials!" border="0"></center></div></li>
+<li><a href="./" onclick="return !showMenu(27, event);">Zombie and Underworld Chests.</li></a><div style="visibility: hidden;position: absolute;" id="menu27" class="blist" onclick="event.cancelBubble"><ul><li>Upper level armour for levels 200 and 210 work somewhat differently from any of the categories coming before it. Rather then hunting for specific weapons or crafting materials from certain NPCs, Lev 200 & 210 equipment come from Zombie and Underworld Chests which drop with a very low chance in Sikuku Underground Prison. Each chest contains a random piece of equipment with base stats, the type of item is only determined when the chest is opened. Please note that we will be following up in a coming update with an NPC that augments stats of high level equipment.</li></ul><center><p><img src="./themes/icons/chests.jpg" title="Zombie and Underworld Chest! :E" alt="Zombie and Underworld Chest! :E" border="0"></center></div></li>
+<li><a href="./" onclick="return !showMenu(28, event);">Pet Shops.</li></a><div style="visibility: hidden;position: absolute;" id="menu28" class="blist" onclick="event.cancelBubble"><ul><li>Lampa in Zant, and Siricu in Junon Polis sell pet capsules for low and mid-range levels.</li></ul></div></li>
+<li><a href="./" onclick="return !showMenu(29, event);">SevenHearts Exclusives.</li></a><div style="visibility: hidden;position: absolute;" id="menu29" class="blist" onclick="event.cancelBubble"><ul><li>Continuing the trend of new Seven Hearts unique weapons- Obsidian Katar drops from two high level NPCs on Eldeon. Glass wings, a Seven Hearts exclusive back item, has been added to the crafting list.</li></ul><center><p><img src="./themes/icons/crescent.jpg" title="Obsidian Katar" alt="Obsidian Katar" border="0"><p><img src="./themes/icons/glasswings.jpg" title="Glass Wings Green & Glass Wings Red" alt="Glass Wings Green & Glass Wings Red" border="0"></center></div></li>
+<li><a href="./" onclick="return !showMenu(30, event);">New Music Tracks.</li></a><div style="visibility: hidden;position: absolute;" id="menu30" class="blist" onclick="event.cancelBubble"><ul><li>11 New BGM tracks were included in this patch, the following maps were affected:<ul><li>Anima Lake</li><li>Breezy Hills</li><li>Faction War</li><li>Forest of Wisdom</li><li>Junon Clan Field</li><li>Lions Plains</li><li>Luxem</li><li>Marsh of Ghosts</li><li>Planetary Warp</li><li>Prologue ( opening sequence )</li><li>Sikuku Underground Prison</li></ul></li></ul></div></li>
+<li><a href="./" onclick="return !showMenu(31, event);">Cosmetic Adjustments.</li></a><div style="visibility: hidden;position: absolute;" id="menu31" class="blist" onclick="event.cancelBubble"><ul><li>Minor adjustments were made to the Scarab Hander`s appearance.</div></li>
+<li><a href="./" onclick="return !showMenu(33, event);">Bug Fixes.</li></a><div style="visibility: hidden;position: absolute;" id="menu33" class="blist" onclick="event.cancelBubble"><ul><li>The missing sounds and projectiles are patched for: Gargoyles, Icanes Leader, Icanes Engineer, Sikuku Infultrator.</li><li>An integer overflow in EXP for characters &gt; Lev 204.</li><li>An issue where Turaks would respawn continuously, allowing anyone to gain unreasonably large amounts of EXP by stacking the damage against several respawned Turaks.</li><li>Faces 4 and 5 from the designer NPC selected the same face.</li><li>P.I.G. and Grunter cart consuming fuel.</li><li>Exp in Sikuku Underground Prison was lowered significantly.</li></ul></div></ul>
+</p></p>
+
+<h1>Seven Hearts v765-v766 Patch</h1>
+<h2>July 10, 2007</h2>
+<p><p><p class="infos"><strong>&nbsp;765 Updates List:</strong><ul>
+<li> <a href="./" onclick="return !showMenu(43, event);">Mt. Eruca Drop Tables.</a></a><div style="visibility: hidden;position: absolute;" id="menu43" class="blist" onclick="event.cancelBubble"><ul><li>Hearts and refines drop less on Mt. Eruca then they used to, zully is the prefered drop for all monsters.</li></ul></div></li>
+<li> <a href="./" onclick="return !showMenu(44, event);">New Mask.</li></a><div style="visibility: hidden;position: absolute;" id="menu44" class="blist" onclick="event.cancelBubble"><ul><li>Il Cigar Classico. A fine cigar for fine gents. Nicely wrapped in natural tobacco leaves, its taste focuses ones busy mind, despite disadvantages. - A Seven Hearts original item, by fugiisland and Camia.</li></ul><center><img src="./ciggy.jpg" title="Il Cigar Classico" alt="Il Cigar Classico" border="0"></center></div></li>
+<li> <a href="./" onclick="return !showMenu(45, event);">New Carts.</li></a><div style="visibility: hidden;position: absolute;" id="menu45" class="blist" onclick="event.cancelBubble"><ul><li>The P.I.G. Cart and P.I.G. Grunter Frame are sold in each faction shop. The Grunter Frame is also a Seven Hearts original, designed by BlackWidow.</li></ul><center><img src="./themes/icons/4x4pig.jpg" title="P.I.G. Cart" alt="P.I.G. Cart" border="0"> <img src="./themes/icons/4x4grunter3.jpg" title="P.I.G. Grunter Frame" alt="P.I.G. Grunter Frame" border="0"></center></div></li>
+<li> <a href="./" onclick="return !showMenu(46, event);">Hair Stylist NPC.</li></a><div style="visibility: hidden;position: absolute;" id="menu46" class="blist" onclick="event.cancelBubble"><ul><li>Players can now chose between an assortment of colors and hairstyles ( some unique to the server ) through a hair stylist NPC in Junon Fields. Gender and face changes are also offered - for a price.</li></ul></div></li>
+<li> <a href="./" onclick="return !showMenu(47, event);">AM Union Wars.</li></a><div style="visibility: hidden;position: absolute;" id="menu47" class="blist" onclick="event.cancelBubble"><ul><li>The morning union wars are initiated automatically from now on rather than manually activated by GameMasters.</li></ul></div></li>
+<li> <a href="./" onclick="return !showMenu(48, event);">Cosmetic Changes.</li></a><div style="visibility: hidden;position: absolute;" id="menu48" class="blist" onclick="event.cancelBubble"><ul><li>One of our goals at Seven Hearts is to make day-to-day tasks more enjoyable and unique. We will occasionally make cosmetic changes to the GUI or parts of the game we feel are underwhelming. Today`s patch changes the appearance of zully boxes, possibly the most common drop item- and equips Hunter summons with bows which scale according to the level of the summon. The final Hunters are equipped with the Six Stick Bow.</li></ul><center><img src="./themes/icons/zbox1.jpg" title="Zully!" alt="Zully!" border="0"></center></div></li>
+<li> <a href="./" onclick="return !showMenu(49, event);">Bugs Fixed.</li></a><div style="visibility: hidden;position: absolute;" id="menu49" class="blist" onclick="event.cancelBubble"><ul><li>Several fixes: disconnecting when using the warp gate between Forest of Wandering and Shady Jungle, Client crashes from certain Eldeon monsters ( mainly Gargoyles ), Revised stats for the Icanes and a fix for certain items becoming invisible when dropped, including the Scarabhander.</li></ul></div></li>
+<li> <a href="./" onclick="return !showMenu(50, event);">Party Bridging Formula.</li></a><div style="visibility: hidden;position: absolute;" id="menu50" class="blist" onclick="event.cancelBubble"><ul><li>Bridging with players more than 40 levels away from the average level of your party is viewed by our team as both an exploit and generally poor game design. To combat this the server applies a formula for new members entering the party, which, allows roughly a difference of 40 levels from the party`s average level. More information is available in the forums.</li></ul></div></ul></p></p>
+
+</td>
+	  
+<!--INFO BAR-->
+  </tr>
+  <tr>
+    <td valign="top" style="width:404px;padding:0;"><img src="./themes/<?=$_SESSION['th']?>/images/news_bottom.jpg" width="404" height="12"></td>
+  </tr>
+</table>
+
+</body></form>
+</html>
