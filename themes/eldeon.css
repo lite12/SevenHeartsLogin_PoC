@@ -1,0 +1,240 @@
+BODY {
+text-align:center;
+margin:0;
+background:#EFD28E url(./eldeon/bgs/bg3.jpg) repeat-x fixed;
+}
+
+body, label, select, option {cursor: url(./generic/Cursors/Default.cur#linkcursor), url(./generic/Cursors/Default.cur), auto;}
+input[type="radio"], input[type="button"], input[type="image"], input[type="IMAGE"], input[type="submit"], input[type="text"], input[type="password"] {cursor: url(./generic/Cursors/Link.cur), url(./generic/Cursors/Link.cur), auto;}
+
+TABLE{ 
+margin:0 auto;
+background:#EFE2A6;
+width:404px;
+font:11px verdana,geneva; 
+font-weight:normal;
+color:salmon;
+border:0;
+padding:0;
+}
+TD {
+padding:0;
+background:#EFE2A6;
+}
+
+A {
+font:11px verdana,geneva; 
+font-weight:normal; 
+color:#994640;
+text-decoration:underline;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+A:hover {
+font:11px verdana,geneva;  
+color:#E5E5E5;
+border:1px solid #994640;
+background:#CB5C12;
+text-decoration:none;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+
+H1 {
+font:18px verdana,geneva; 
+font-weight:bold; 
+color:#CB5C12;
+margin-top:5px;
+margin-bottom:2px;
+}
+H2 {
+font:10px verdana,geneva; 
+font-weight:normal; 
+color:#D28605;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+INPUT {
+width:120px;
+margin:3px 5px;
+padding:1px 2px;
+border:1px solid #000000;
+font:10px verdana,geneva;
+color:#4D619E;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+.input {padding:0px; margin:0px;}
+
+P {
+line-height:16px;
+margin-top:4px;
+color: #D28605;
+}
+
+Li {
+list-style-image: url(./eldeon/images/heart.gif);
+/* color: #629615; */
+text-decoration: none;
+}
+Li A{
+text-decoration:none;
+cursor: url(./generic/Cursors/Link.cur#linkcursor), url(./generic/Cursors/Link.cur), auto;
+}
+
+UL {
+margin:3px 0 8px 0;
+padding-left:35px;
+width:82%;
+font-size:10px;
+line-height:14px;
+color:#666666;
+}
+UL A {font-size:10px}
+UL A:hover {font-size:10px}
+
+
+/*MIDDLE INFO SECTION*/
+
+.left {
+background:url(./eldeon/images/middle_1.jpg);
+width:124px;
+height:89px;
+padding:0px;
+font:10px verdana;
+font-weight: bold;
+color: #8A571B;
+}
+#population {text-align:left;margin-top:11px;margin-left:16px}
+
+.midi {
+width:116px;
+height:89px;
+background:url(./eldeon/images/middle_2empty.jpg);
+}
+
+.riteA {
+width:79px;
+height:89px;
+background:url(./eldeon/images/middle_3a.jpg);
+padding:0px;
+font:10px verdana;
+color: #8A571B;
+font-weight: bold;
+}
+.riteB {
+width:85px;
+height:89px;
+background:url(./eldeon/images/middle_3b.jpg);
+padding:0px;
+font:10px verdana;
+color: #8A571B;
+font-weight: bold;
+}
+#jobA {text-align:left;margin-top:11px;margin-left:11px}
+#jobB {text-align:left;margin-top:11px;margin-left:1px}
+
+/*INPUTS ETC*/
+INPUT {
+background:url(./eldeon/images/input_1.gif);
+width:112px;
+height:17px;
+border:0;
+padding:2px 4px;
+font:9px verdana,geneva;
+color:#A9793A;
+margin:0;
+}
+.inputMidi A:hover {border:0;background:none;}
+
+/*NEWS STUFF*/
+.news {
+padding:0;
+}
+.news P:hover {
+background:#FBFAE2;
+}
+
+/*GLOV*/
+
+.menu { POSITION: absolute; VISIBILITY: hidden; BACKGROUND-COLOR: #DFE6EF; LAYER-BACKGROUND-COLOR: #DFE6EF; BORDER-LEFT: 1px solid black; BORDER-TOP: 1px solid black; BORDER-BOTTOM: 3px solid black; BORDER-RIGHT: 3px solid black; PADDING: 3px; z-index: 10; width: 110 }
+.blist { POSITION: absolute; VISIBILITY: hidden; BACKGROUND-COLOR: #DFE6EF; LAYER-BACKGROUND-COLOR: #DFE6EF; BORDER-LEFT: 1px solid black; BORDER-TOP: 1px solid black; BORDER-BOTTOM: 3px solid black; BORDER-RIGHT: 3px solid black; PADDING: 3px; z-index: 10; width: 410 }
+
+/* [lightbox] */
+#lightbox{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+	}
+
+#lightbox a img{ border: none; }
+
+#outerImageContainer{
+	position: relative;
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	}
+
+#imageContainer{
+	padding: 10px;
+	}
+
+#loading{
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+	}
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	}
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{
+	width: 49%;
+	height: 100%;
+	background: transparent url(./generic/images/lightbox/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	}
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(./generic/images/lightbox/prevlabel.gif) left 15% no-repeat; border: 0; }
+#nextLink:hover, #nextLink:visited:hover { background: url(./generic/images/lightbox/nextlabel.gif) right 15% no-repeat; border: 0; }
+
+#imageDataContainer{
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%	
+	}
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; border:0;	}	
+		
+#overlay
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+	background-color: #000;
+} /* [lightbox] */
