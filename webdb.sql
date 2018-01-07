@@ -1,9 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
---
+-- phpMyAdmin SQL Dump version 4.7.4
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2018 at 08:18 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.2.0
 
@@ -18,19 +14,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
 -- Database: `webdb`
---
 CREATE DATABASE IF NOT EXISTS `webdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `webdb`;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `useraccount`
---
--- Creation: Jan 04, 2018 at 05:11 PM
---
+-- Table structure for table `useraccount` - Creation: Jan 04, 2018 at 05:11 PM
 
 DROP TABLE IF EXISTS `useraccount`;
 CREATE TABLE `useraccount` (
@@ -51,24 +39,13 @@ CREATE TABLE `useraccount` (
   `daterelease` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Date/time account can login after too many unsuccessful login attempts over a short time period. Prevents brute-force attacks.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User Accounts';
 
---
--- RELATIONSHIPS FOR TABLE `useraccount`:
---
-
---
 -- Dumping data for table `useraccount`
---
+-- Salted MD5 hash for account "account1" (pass simply: "pass1") --
 
 INSERT INTO `useraccount` (`uid`, `account`, `passhash`, `account_question`, `fname`, `mname`, `lname`, `bday`, `email`, `regdate`, `mail_opt`, `remote_ip`, `last_active`, `last_ip`, `daterelease`) VALUES
 (13, 'account1', '32d71cfc54da16695fcde685f928ee06', 'secret1', 'Firstname', 'Middlename', 'Lastname', '2018-01-01', 'lite00@shaw.ca', '2018-01-04 13:17:32', 1, '24.76.203.71', '2018-01-04 13:17:47', '24.76.203.71', '2018-01-04 13:17:32');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `userlogin_log`
---
--- Creation: Jan 04, 2018 at 07:14 PM
---
+-- Table structure for table `userlogin_log` - Creation: Jan 04, 2018 at 07:14 PM
 
 DROP TABLE IF EXISTS `userlogin_log`;
 CREATE TABLE `userlogin_log` (
@@ -78,62 +55,29 @@ CREATE TABLE `userlogin_log` (
   `account` varchar(130) COLLATE utf8_bin DEFAULT NULL COMMENT 'Account (optional)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User account login log';
 
---
--- RELATIONSHIPS FOR TABLE `userlogin_log`:
---
-
---
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `useraccount`
---
+
 ALTER TABLE `useraccount`
   ADD PRIMARY KEY (`uid`),
   ADD UNIQUE KEY `email_unique` (`email`),
   ADD UNIQUE KEY `account_unique` (`account`) USING BTREE;
 
---
 -- Indexes for table `userlogin_log`
---
+
 ALTER TABLE `userlogin_log`
   ADD PRIMARY KEY (`uid`),
   ADD KEY `account_idx` (`account`) USING BTREE;
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `useraccount`
---
+
 ALTER TABLE `useraccount`
   MODIFY `uid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
---
 -- AUTO_INCREMENT for table `userlogin_log`
---
+
 ALTER TABLE `userlogin_log`
   MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique Identifier', AUTO_INCREMENT=22;
 
-
---
--- Metadata
---
-USE `phpmyadmin`;
-
---
--- Metadata for table useraccount
---
-
---
--- Metadata for table userlogin_log
---
-
---
--- Metadata for database webdb
---
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
