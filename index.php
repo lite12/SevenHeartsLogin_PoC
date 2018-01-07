@@ -1,7 +1,7 @@
 <?
+/* Switch between hiding and showing errors quickly, to mimic differences in dev/prod environment. */
 if (isset($_COOKIE['debug'])) {
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+	error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED); ini_set('display_errors', 1);
 }
 
 /* If 'action' has been specified, associate it with one of the pre-defined site areas from the array. If it's not a valid area, then load the default (main) page. */
