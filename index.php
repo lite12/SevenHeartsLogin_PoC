@@ -4,6 +4,7 @@ if (isset($_COOKIE['debug'])) {
 	error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 }
 
+/* If 'action' has been specified, associate it with one of the pre-defined site areas from the array. If it's not a valid area, then load the default (main) page. */
 $arr_actions = array( 'main', 'login', 'reg', 'regform', 'logout' );
 $act = array_search(($_GET['action'] ?? 'main'), $arr_actions);
 
