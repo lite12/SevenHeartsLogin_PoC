@@ -4,4 +4,4 @@ Proof of concept of registration, authentication, session handling and examples 
 
 Live demo verified working with PHP 7.2.0, 10.1.28-MariaDB (100% MySQL compatible).
 
-Note short-tags should be "On" in php.ini and some of the PHP operators and "syntactic sugar" used is specific to PHP v7 and higher.
+Note that short-tags should be "On" in php.ini and some of the PHP operators and "syntactic sugar" used is specific to PHP v7 and higher.
